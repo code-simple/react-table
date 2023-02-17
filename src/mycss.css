@@ -1,0 +1,62 @@
+body{
+    background:linear-gradient(45deg, rgba(255, 0, 0, 0.37),rgba(0, 0, 255, 0.415));
+    background: -webkit-gradient(45deg rgba(255, 0, 0, 0.37),rgba(0, 0, 255, 0.415));
+    height: 100%;
+    font-family: 'JetBrains Mono',monospace;
+    font-weight:lighter;
+    
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 600px;
+    overflow-y: scroll;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  table {
+    border-radius: 10px;
+    width: 800px;
+    height: 800px;
+    overflow: visible;
+    border-collapse:collapse;
+    
+  }
+  th,
+  td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #282828;
+  }
+  th {
+    text-align: left;
+  }
+  
+ 
+  thead {
+    background: white;
+    position: sticky;
+    top: 0; 
+    z-index: 1;/* Don't forget this, required for the stickiness */
+  }
+ 
+
+  tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  tbody td {
+    position: relative;
+  }
+  
+  
+  tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+  }
